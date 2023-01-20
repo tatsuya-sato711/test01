@@ -49,7 +49,7 @@ Set-Item env:PGCLIENTENCODING -Value UNICODE
 -h secure-geocluster.cswoz8ktixcx.ap-northeast-1.redshift.amazonaws.com `
 -p 5439 `
 -U sys_dmp `
--d geodb > $tmpLogFile 2>&1
+-d geodb > $tmpLogFile 
 
 
 $ret = -not (Get-Content $tmpLogFile | Out-String).contains('ERROR:')
@@ -85,7 +85,7 @@ while ($true){
     -h secure-geocluster.cswoz8ktixcx.ap-northeast-1.redshift.amazonaws.com`
     -p 5439`
     -U sys_dmp`
-    -d geodb > $tmpLogFile 2>&1
+    -d geodb > $tmpLogFile 
     }catch { 
         OutLogErr 'An error has occurred. Retry after 10mins.'
         aws sns publish --topic-arn $snsArn --message $messegeRetry --subject $messageRetry;
@@ -123,7 +123,7 @@ while ($true){
     -h secure-geocluster.cswoz8ktixcx.ap-northeast-1.redshift.amazonaws.com`
     -p 5439`
     -U sys_dmp`
-    -d geodb > $tmpLogFile 2>&1 
+    -d geodb > $tmpLogFile 
     }catch { 
         OutLogErr ?gAn error has occurred. Retry after 10mins.?h
         aws sns publish --topic-arn $snsArn --message $messegeRetry --subject $messageRetry;
