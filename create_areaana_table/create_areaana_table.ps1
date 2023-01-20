@@ -137,6 +137,6 @@ while ($true){
           }
       }
     
-
+# テスト追記。
 OutLogInfo 'vacuum areaana table end'
 Exit 0
