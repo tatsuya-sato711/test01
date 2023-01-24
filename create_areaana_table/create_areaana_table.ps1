@@ -144,3 +144,5 @@ while ($true) {
 # I—¹ˆ—
 OutLogInfo 'vacuum areaana table end'
 Exit 0
+
+testtesttest;
